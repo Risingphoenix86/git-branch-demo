@@ -1,0 +1,141 @@
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch testing
+fatal: Not a valid object name: 'main'.
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch main
+fatal: Not a valid object name: 'main'.
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ rm -fr .git
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo
+$ git init
+Initialized empty Git repository in C:/Users/Kyle/Desktop/Bootcamp/Homework-repos/git-branch-demo/.git/
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ touch index.html
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git add .
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch small-feature
+fatal: Not a valid object name: 'main'.
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git commit
+hint: Waiting for your editor to close the file...
+[main (root-commit) d8ffd6d] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch
+* main
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch small-feature
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch
+* main
+  small-feature
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git checkout small-feature
+Switched to branch 'small-feature'
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (small-feature)
+$ git branch another-feature
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (small-feature)
+$ git checkout another-feature
+Switched to branch 'another-feature'
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (another-feature)
+$ touch style.css
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (another-feature)
+$ git add -A
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (another-feature)
+$ git commit -m
+error: switch `m' requires a value
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (another-feature)
+$ git commit -m "add style.css
+>
+> "
+[another-feature 72f27d5] add style.css
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 style.css
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (another-feature)
+$ git checkout main
+Switched to branch 'main'
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git merge another-feature
+Updating d8ffd6d..72f27d5
+Fast-forward
+ style.css | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 style.css
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ ls
+index.html  style.css
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch
+  another-feature
+* main
+  small-feature
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch -d another-feature
+Deleted branch another-feature (was 72f27d5).
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch
+* main
+  small-feature
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git log
+commit 72f27d529f6e5c98f965024d5f4aadb97216b895 (HEAD -> main)
+Author: Kyle Lux <kyleslux86@gmail.com>
+Date:   Sat Aug 7 11:44:09 2021 -0400
+
+    add style.css
+
+commit d8ffd6de0c128810877db305b320edd771681e55 (small-feature)
+Author: Kyle Lux <kyleslux86@gmail.com>
+Date:   Sat Aug 7 11:41:32 2021 -0400
+
+    initial commit
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git merge small-feature
+Already up to date.
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ ^C
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$
