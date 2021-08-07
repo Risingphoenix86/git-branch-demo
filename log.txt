@@ -138,4 +138,105 @@ Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
 $ ^C
 
 Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git touch log.txt
+git: 'touch' is not a git command. See 'git --help'.
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ touch log.txt
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git add .
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git commit -m "adding log of commands"
+[main fb3427e] adding log of commands
+ 1 file changed, 141 insertions(+)
+ create mode 100644 log.txt
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git remote add git-branch-demo https://github.com/Risingphoenix86
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git push git-branch-demo
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream git-branch-demo main
+
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git push --set-upstream git-branch-demo main
+remote: Not Found
+fatal: repository 'https://github.com/Risingphoenix86/' not found
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git remote add git-branch-demo https://github.com/Risingphoenix86/git-branch-demo.git
+error: remote git-branch-demo already exists.
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git push --set-upstream https://github.com/Risingphoenix86/git-branch-demo.git
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/Risingphoenix86/git-branch-demo.git main
+
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git remote add origin git@github.com:Risingphoenix86/git-branch-demo.git
+git push -u origin main
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git branch -M main
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ git push -u origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.50 KiB | 767.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Risingphoenix86/git-branch-demo.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
+$ ^C
+
+Kyle@TheFlash MINGW64 ~/Desktop/Bootcamp/Homework-repos/git-branch-demo (main)
 $
